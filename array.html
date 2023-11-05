@@ -1,0 +1,64 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>配列</title>
+<script src="js/jquery-2.1.3.min.js"></script>
+<style>#main{margin:5px;padding: 5px; background: #666;color:#fff;}</style>
+</head>
+<body>
+<h1>配列</h1>
+
+<!-- ここに日時を表示させる -->
+<div id="view"></div>
+<!-- ここに日時を表示させる -->
+
+以下に入力してください↓
+<input type="text" id="test">
+
+<button id="aa">ボタンを押す</button>
+
+<script>
+//記述練習
+const a = ["A","B","C"];
+// console.log(a,'aタンス');
+// console.log(a[1],'B')
+
+
+const menu = ["カレー","おでん","うどん","麻婆豆腐","猪鍋","いくら丼"];
+// console.log(menu,'menuタンス');
+// console.log(menu[3],'番目');
+
+// 画面に表示
+// $('#view').html(menu[3]);
+// for文の演習
+for(let i = 0; i <= menu.length; i++){
+    // console.log(menu[i],'メニューの中身')
+}
+
+
+// val()とは
+// お客様が入力した文字を取得するおまじない
+// inputタグのことを指している
+$('#aa').on('click',function(){
+    let vv = $('#test').val();
+    console.log(vv,'入力された文字')
+
+if(vv === ''){
+    alert('なにも入力されていません！')
+}
+
+// 入力欄を空にするテクニック
+$('#test').val('')
+
+})
+
+// //くじ札
+// const kuji = ["大吉", "吉", "凶"];
+// const r = Math.floor(Math.random()*3); 
+// $("#view").html(kuji[r]);
+
+</script>
+</body>
+</html>
